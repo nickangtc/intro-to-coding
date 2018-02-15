@@ -1,10 +1,17 @@
-![GA icon](https://raw.github.com/generalassembly/ga-ruby-on-rails-for-devs/master/images/ga.png)
-# Smart Coding 101
-Coding is good in theory but it's even better in practice, so let's get coding!
+# Intro to Coding
 
-We are going to use an online code editor called Codepen to write our HTML and CSS. We've already made a template project for you, with all the best settings! [Click here to go to the template](http://codepen.io/ga-sg/pen/GWMwOE).
+Before we start, it will be very helpful if you signed up for a GitHub account if you haven't already done so. GitHub is a place many developers use to host their projects and code for free, and share them with everyone in the world.
+
+We are going to use an online code editor called Codepen to write our HTML and CSS. We've already made a template project for you, with all the best settings! [Click here to go to the template](https://codepen.io/nickang/pen/xYXzMX).
 
 So that you can save your progress, hit the `FORK` button on the header bar. This will create your own copy of the template - you can also change the title if you like.
+
+__Jump to:__
+
+- [Part 1 - HTML](#part-1-describing-content-with-html-30-minutes)
+- [Part 2 - CSS](#part-2-adding-style-to-content-with-css-30-minutes)
+- [Part 3 - JavaScript](#part-3-adding-interactivity-with-javascript-30-minutes)
+- [Part 4 - Upload to GitHub for free](#part-4-get-it-online-15-minutes)
 
 ## Part 1: Describing Content with HTML (30 minutes)
 Below is some placeholder text for our website - you can update this later with your own details.
@@ -40,12 +47,12 @@ Magni dolorum, minus vitae magnam facere aperiam porro pariatur vel! Repudiandae
 https://github.com/your-github-username Find me on Github
 https://github.com/your-linkedin-username Find me on LinkedIn
 
-© 2017 Your Name
-
-Made in 2hrs in General Assembly's Smart Coding 101
+© 2018 Your Name
 ```
 
-Copy and paste the above into your HTML tab in Codepen. Oh my, all of our formatting has disappeared, to get it back we need to mark-it-up with HTML.
+Copy and paste the above into your HTML tab in Codepen. Oops, all of our formatting has disappeared!
+
+To get it back we need to mark-it-up with HTML.
 
 ### Header, Main, Footer
 
@@ -73,7 +80,7 @@ Let's wrap each section in the coresponding html tag:  __header__ for the header
 
   © 2017 Your Name
 
-  Made in 2hrs in General Assembly's Smart Coding 101
+  Made in 2hrs at an Intro to Coding workshop
 </footer>
 ```
 
@@ -199,7 +206,7 @@ This footer information is not as important as the main site content, so let's w
 <small>
   <strong>© 2017 Your Name</strong>
   <br>
-  Made in 2hrs in General Assembly's Smart Coding 101
+  Made in 2hrs at an Intro to Coding workshop
 </small>
 ```
 
@@ -266,7 +273,7 @@ Next we'll learn about CSS. If you've finished early, spend some time personaliz
   <small>
     <strong>© 2017 Your Name</strong>
     <br>
-    Made in 2hrs in General Assembly's Smart Coding 101
+    Made in 2hrs at an Intro to Coding workshop
   </small>
 </footer>
 ```
@@ -566,7 +573,7 @@ Next we'll learn how to deploy it online. If you've finished early, spend some t
   <small>
     <strong>© 2017 Your Name</strong>
     <br>
-    Made in 2hrs in General Assembly's Smart Coding 101
+    Made in 2hrs at an Intro to Coding workshop
   </small>
 </footer>
 ```
@@ -669,7 +676,13 @@ footer {
 
 ---
 
-## Part 3 - Get It Online (15 minutes)
+## Part 3: Adding interactivity with JavaScript (30 minutes)
+
+
+
+---
+
+## Part 4 - Get It Online (15 minutes)
 
 Ok, so we've built our website and now we're going to deploy it online. As this is a 'smart' coding class, we're going to do that in a very clever and easy way. The first step is to setup an account on Github.com.
 
