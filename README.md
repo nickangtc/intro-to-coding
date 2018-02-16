@@ -850,9 +850,6 @@ Well done! View your results with pride, smile and play around with some styling
 
 We hope you enjoyed the session.
 
-### Example Solution
-The finished [HTML & CSS Files can be downloaded here](https://github.com/wdi-sg/smart-coding-101/archive/master.zip) and [an online example can be seen here](https://wdi-sg.github.io/smart-coding-101).
-
 ---
 
 ## Licensing
