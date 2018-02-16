@@ -2,7 +2,7 @@
 
 Before we start, it will be very helpful if you signed up for a GitHub account if you haven't already done so. GitHub is a place many developers use to host their projects and code for free, and share them with everyone in the world.
 
-We are going to use an online code editor called Codepen to write our HTML and CSS. We've already made a template project for you, with all the best settings! [Click here to go to the template](https://codepen.io/nickang/pen/xYXzMX).
+We are going to use an online code editor called Codepen to write our HTML, CSS, and JavaScript. We've already made a template project for you, with all the best settings! [Click here to go to the template](https://codepen.io/nickang/pen/xYXzMX).
 
 So that you can save your progress, hit the `FORK` button on the header bar. This will create your own copy of the template - you can also change the title if you like.
 
@@ -78,7 +78,7 @@ Let's wrap each section in the coresponding html tag:  __header__ for the header
   Find me on Github: https://github.com/your-github-username
   Find me on LinkedIn: https://linkedin.com/your-linkedin-username
 
-  © 2017 Your Name
+  © 2018 Your Name
 
   Made in 2hrs at an Intro to Coding workshop
 </footer>
@@ -196,7 +196,7 @@ Let's turn each link into an __a tag__ so that users can click on it to follow i
 Let's make the copyright notice more important using a __strong tag__. Let's also add a new line between the copyright notice and the creator info by using a __br tag__.
 
 ```html
-<strong>© 2017 Your Name</strong>
+<strong>© 2018 Your Name</strong>
 <br>
 ```
 
@@ -204,7 +204,7 @@ This footer information is not as important as the main site content, so let's w
 
 ```html
 <small>
-  <strong>© 2017 Your Name</strong>
+  <strong>© 2018 Your Name</strong>
   <br>
   Made in 2hrs at an Intro to Coding workshop
 </small>
@@ -271,7 +271,7 @@ Next we'll learn about CSS. If you've finished early, spend some time personaliz
     <a href="https://linkedin.com/your-linkedin-username" target="_blank">Find me on LinkedIn</a>
   </nav>
   <small>
-    <strong>© 2017 Your Name</strong>
+    <strong>© 2018 Your Name</strong>
     <br>
     Made in 2hrs at an Intro to Coding workshop
   </small>
@@ -571,7 +571,7 @@ Next we'll learn how to deploy it online. If you've finished early, spend some t
     </a>
   </nav>
   <small>
-    <strong>© 2017 Your Name</strong>
+    <strong>© 2018 Your Name</strong>
     <br>
     Made in 2hrs at an Intro to Coding workshop
   </small>
@@ -678,11 +678,110 @@ footer {
 
 ## Part 3: Adding interactivity with JavaScript (30 minutes)
 
+Now that our website looks presentable, let's add a finishing touch with JavaScript to make it just a bit fancy. We will be adding a "Like" counter, similar to the "Clap" counter on Medium posts!
 
+To get started, we need a new element in the footer that will hold the counter and the button to "Clap".
+
+```html
+<span id="likes-counter">9</span>
+<button id="like"><3</button>
+```
+
+We give both of them IDs so that we can refer to them using JavaScript later. Actually, let's start doing that now.
+
+In the "JS" section of Codepen, we need to create two variables that hold different values:
+
+1. A variable called `counter` to store the current numerical count of the number of claps given
+1. A variable called `button` that stores a reference to the button element
+
+```js
+// initialise variable 'counter' to hold number of likes
+var counter = 9;
+
+// select the button on the page
+var button = document.getElementById('like');
+```
+
+Now, we add an __event listener__ to the button, to tell the browser to "listen" for specific events (like a click on the button) and do something when the click happens.
+
+```js
+// listen to clicks on the button,
+// and invoke the `increaseCounter` function when it happens
+button.addEventListener('click', increaseCounter);
+```
+
+With this set up, whenever the button is clicked, a function called `increaseCounter` will be invoked. Invocation just means a bunch of code contained in a function will be executed once.
+
+Now the only thing left to do is to define this `increaseCounter` function. Think for a moment - what needs to be done to the page when a user clicks on the button? Thought about it already? Great! You probably came up with a few steps similar to these:
+
+- Increase the variable `counter` value by 1 (so 9 becomes 10, for example)
+- Reflect this newly incremented value on the page
+
+In JavaScript, that code would look something like this.
+
+```js
+function increaseCounter() {
+  // increase 'counter' value by 1
+  counter = counter + 1;
+
+  // update new counter value on the page
+  document.getElementById('likes-counter').textContent = counter;
+}
+```
+
+### Part 3 - final code
+
+__HTML__
+
+```html
+<body>
+  <main>
+    ... some code here...
+  </main>
+  <footer>
+    <nav class="social-links">
+      <a href="https://github.com/your-github-username" class="link-item">
+        <i class="fa fa-2x fa-github-square"></i> Find me on Github
+      </a>
+      <a href="https://linkedin.com/in/your-linkedin-username" class="link-item">
+        <i class="fa fa-2x fa-linkedin-square"></i>Find me on LinkedIn
+      </a>
+    </nav>
+    <small>
+      <strong>© 2018 Your Name</strong>
+      <br>
+      <span id="likes-counter">9</span>
+      <button id="like"><3</button>
+    </small>
+  </footer>
+</body>
+```
+
+__JavaScript__
+
+```js
+// initialise variable 'counter' to hold number of likes
+var counter = 9;
+
+// select the button on the page
+var button = document.getElementById('like');
+
+// listen to clicks on the button,
+// and call 'increaseCounter' when it happens
+button.addEventListener('click', increaseCounter);
+
+function increaseCounter() {
+  // increase 'counter' value by 1
+  counter = counter + 1;
+
+  // update new counter value on the page
+  document.getElementById('likes-counter').textContent = counter;
+}
+```
 
 ---
 
-## Part 4 - Get It Online (15 minutes)
+## Part 4: Get It Online (15 minutes)
 
 Ok, so we've built our website and now we're going to deploy it online. As this is a 'smart' coding class, we're going to do that in a very clever and easy way. The first step is to setup an account on Github.com.
 
